@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Welcome</h1>
+        <br><br>
+        <h3>Mention your percentage to see the eligibility for examination</h3>
+        <br>
+        marks <input id="attendance" type="number" placeholder="Enter your marks percentage">
+        <br>
+        <button onclick="check()" style="margin: 45px; width: 200px; border-radius: 10px; padding: auto;font-size: larger;">Check</button>
+        <h1 class="result" style="color: green; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif";></h1>
+        <script>
+            function check(){
+            var atds = document.getElementById("attendance").value
+            console.log(atds)
+
+            if(atds > 75){
+                document.getElementsByClassName("result")[0].innerHTML ="Youare Eligible to write exam"
+                console.log("Yes")
+                document.getElementsByClassName("result")[0].style.color="green"
+
+            }
+            else{
+                document.getElementsByClassName("result")[0].innerHTML = "You are not eligible to write exam"
+                console.log("Yes")
+                document.getElementsByClassName("result")[0].style.color="red"
+            }
+            }
+        </script>
+    </div>
+</body>
+</html>
